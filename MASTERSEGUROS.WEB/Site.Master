@@ -1,0 +1,290 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="MASTERSEGUROS.WEB.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="HeadSigrel" runat="server" >
+    <title></title>
+  <!-- Ionicons -->
+
+    <link href="Styles/ionicons.min.css.css" rel="stylesheet" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" runat="server"  id="lnk1"/>
+    <link href="~/Styles/print.css"  rel="stylesheet" type="text/css" runat="server" media="print" id="lnk2"/>
+    
+    <!--<link type="text/css" rel="stylesheet" href="~/Styles/jquery-ui.css" />-->
+    <link href="fonts/OpenSans.css"  type="text/css" rel="stylesheet" />
+     <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css"/>-->
+    <link href="Styles/font-awesome.min.css" rel="stylesheet"/><!--//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css-->
+    <link href="Styles/app.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Styles/jquery-ui.css" rel="stylesheet"  type="text/css" />
+    <style type="text/css">
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #427c97;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+ 
+    <!--<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<link  type="text/css" href="css/components.min.css" rel="stylesheet" />-->
+    <!--<link href="Styles/file-upload.css" rel="stylesheet" type="text/css"/>-->
+
+    <!--<link type="text/css" rel="stylesheet" href="/resources/demos/style.css"/>-->
+    <script type="text/javascript"src="js/jquery-1.12.4.js"></script><!--https://code.jquery.com/ui/1.12.0/jquery-ui.js-->
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript"  src="Scripts/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ssd-vertical-navigation.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!--<script type="text/javascript" src="js/file-upload.js"></script>-->
+   
+    <script  type="text/javascript" id="jscal1x">
+        var cal = new CalendarPopup();
+
+        function cancelFullScreen(el) {
+            var requestMethod = el.cancelFullScreen || el.webkitCancelFullScreen || el.mozCancelFullScreen || el.exitFullscreen;
+            if (requestMethod) { // cancel full screen.
+                requestMethod.call(el);
+            } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+                var wscript = new ActiveXObject("WScript.Shell");
+                if (wscript !== null) {
+                    wscript.SendKeys("{F11}");
+                }
+            }
+        }
+
+        function requestFullScreen(el) {
+            // Supports most browsers and their versions.
+            var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            if (requestMethod) { // Native full screen.
+                requestMethod.call(el);
+            } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+                var wscript = new ActiveXObject("WScript.Shell");
+                if (wscript !== null) {
+                    wscript.SendKeys("{F11}");
+                }
+            }
+            return false
+        }
+
+        function toggleFull() {
+            var elem = document.body; // Make the body go full screen.
+            var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) || (document.mozFullScreen || document.webkitIsFullScreen);
+
+            if (isInFullScreen) {
+                cancelFullScreen(document);
+            } else {
+                requestFullScreen(elem);
+            }
+            return false;
+        }
+    </script>
+
+
+<asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body  style="font-family:Open sans, Sans-serif" onbeforeunload="ShowBox();"  onload="HideBox();" >
+    <form id="Form1" runat="server">
+
+    <asp:Label runat="server" ID="lblUserText" style='padding-left:272px;Font-Size:12px'></asp:Label> 
+    <asp:Label  runat="server" id="lblAlterar"> | <a href="AdminPassword.aspx" style="color:#dbb84f;" class="fa fa-key leftNavIcon" id="hplAlterarSenha"><span style="color:#3f5061;font-size: 12px; font-family: Open sans, Sans-serif;"> Alterar Palavra Passe</span></a></asp:Label> 
+
+    <div id="contentWrapper">
+        <div id="contentLeft">
+            <div class="logo"> 
+            <a href="<%=getBaseURL()%>/default.aspx"> <img src="images/logo.png" alt=""/></a>
+        </div>
+        <ul id="leftNavigation">
+              <li style="<%=getStatusMenu("simulacao")%>" class="<%=(Page.AppRelativeVirtualPath.ToLower().IndexOf("simulacao") > 0 ?"active":"inactive") %>">
+                <a href="#"><i class="fa fa-gears leftNavIcon"></i> Simulações e Propostas</a>
+                <ul>
+                    <li>
+                        <a href="adminsimulacao.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Automóvel</a>
+                    </li>
+                     <li>
+                        <a href="adminsimulacaofrota.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Automóvel - Frota</a>
+                    </li>
+                    <li>
+                        <a href="adminsimulacaoat.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Ac. Trabalho</a>
+                    </li>
+                    <li>
+                        <a href="pesquisasimulacao.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Consultar</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li style="<%=getStatusMenu("cliente")%>" class="<%=(Page.AppRelativeVirtualPath.ToLower().IndexOf("cliente") > 0 ?"active":"inactive") %>">
+                <a href="#"><i class="fa fa-user leftNavIcon"></i> Clientes</a>
+                <ul>
+                    <li>
+                        <a href="admincliente.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Novo Cliente</a>
+                    </li>
+                    <li>
+                        <a href="pesquisacliente.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Consultar</a>
+                    </li>
+                </ul>
+            </li>
+            <li style="<%=getStatusMenu("apolice")%>" class="<%=(Page.AppRelativeVirtualPath.ToLower().IndexOf("apolice") > 0?"active":"inactive") %>">
+                <a href="#"><i class="fa fa-certificate leftNavIcon"></i> Apólices</a>
+                <ul>
+                    <li>
+                        <a href="pesquisaapolice.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Consultar Apólice</a>
+                    </li>
+                   
+                </ul>
+            </li>
+            <li style="<%=getStatusMenu("tesouraria")%>" class="<%=(Page.AppRelativeVirtualPath.ToLower().IndexOf("pagamentos") > 0?"active":"inactive") %>">
+                <a href="#"><i class="fa fa-bookmark leftNavIcon"></i> Tesouraria</a>
+                <ul>
+                    <li>
+                        <a href="PesquisaPagamentos.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Registar Pagamento</a>
+                    </li>
+                </ul>
+            </li>
+            <li style="<%=getStatusMenu("sinistro")%>">
+                <a href="#"><i class="fa fa-road leftNavIcon"></i> Sinistros</a>
+                <ul>
+                     <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Registar Sinistro</a>
+                    </li>
+                     <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Consultar Sinistro</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li style="<%=getStatusMenu("arquivo")%>" class="<%=(Page.AppRelativeVirtualPath.ToLower().IndexOf("documento") > 0?"active":"inactive") %>">
+                <a href="#"><i class="fa fa-book leftNavIcon"></i> Arquivo Documental</a>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Consultar</a>
+                    </li>
+                </ul>
+                 <ul>
+                    <li>
+                        <a href="RegistaDocumento.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Registar</a>
+                    </li>
+                </ul>
+            </li>
+            <li style="<%=getStatusMenu("parametros")%>" class="<%=(Page.AppRelativeVirtualPath.ToLower().IndexOf("parametros") > 0?"active":"inactive") %>">
+                <a href="#"><i class="fa fa-gear leftNavIcon"></i> Parâmetros</a>
+                <ul>
+
+                     <li>
+                        <a href="AdminParametrosConfiguracoes.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Configurações Gerais</a>
+                    </li>
+                     <li>
+                        <a href="AdminParametrosProvincias.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Províncias/Municípios</a>
+                    </li>
+                    <li>
+                        <a href="AdminParametrosMarcas.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Marcas</a>
+                    </li>
+                     <li>
+                        <a href="AdminParametrosModelos.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Modelos</a>
+                    </li>
+                    <li>
+                        <a href="AdminParametrosBancos.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Bancos</a>
+                    </li>
+                    <li>
+                        <a href="AdminParametrosCategorias.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Categorias</a>
+                    </li>
+                    <li>
+                        <a href="AdminParametrosTipoCategoria.aspx"><i class="fa fa-angle-right leftNavIcon"></i>Tipo Categorias</a>
+                    </li>
+                     <li>
+                        <a href="AdminParametrosUserRoles.aspx"><i class="fa fa-angle-right leftNavIcon"></i> Utilizadores/Grupos</a>
+                    </li>
+                </ul>
+            </li>
+             <li class="clickable">
+                <asp:LinkButton ID="HyperlinkSair" runat="server" OnClick="SignOut_ServerClick" ><i class="fa fa-power-off leftNavIcon"></i>Sair</asp:LinkButton>
+                <!--<a href="#"><i class="fa fa-power-off leftNavIcon"></i> Sair</a>-->
+            </li>
+
+        </ul>
+
+    </div>
+        <div id="contentRight" style="width:77%">
+          
+       <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    </div>
+    </div>
+    
+    </form>
+    <div id="loader"></div>
+
+
+</body>
+    
+
+</html>
+
+<script type="text/javascript">
+var myVar;
+
+function ShowBox() {
+    //alert('1');
+    //myVar = setTimeout(showPage, 10000);
+    document.getElementById("loader").style.display = "inline";
+}
+
+function showPage() {
+    //alert('2');
+    document.getElementById("loader").style.display = "none";
+}
+
+
+function HideBox()
+{
+    //alert('3');
+    document.getElementById("loader").style.display = "none";
+}
+</script>

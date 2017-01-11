@@ -1,0 +1,1161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D3CA19E-E3C5-4C15-8B5C-950AE57BA6BA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MASTERSEGUROS.WEB</RootNamespace>
+    <AssemblyName>MASTERSEGUROS.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib.Barcode.ASP.NET">
+      <HintPath>DLL\BarcodeLib.Barcode.ASP.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>DLL\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>DLL\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>DLL\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWebUI">
+      <HintPath>DLL\OfficeWebUI.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>DLL\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Select.HtmlToPdf, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Select.HtmlToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Winthusiasm.HtmlEditor">
+      <HintPath>DLL\Winthusiasm.HtmlEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCliente.aspx" />
+    <Content Include="Account\LoginExt.aspx" />
+    <Content Include="AdminAlteraPalavraPasse.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="AdminAlteraPalavraPasseSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AdminParametrosConfiguracoes.aspx" />
+    <Content Include="AdminParametrosMarcas.aspx" />
+    <Content Include="AdminSimulacaoFrotaUpdate.aspx" />
+    <Content Include="AdminSimulacaoFrota.aspx" />
+    <Content Include="AdminParametrosBancos.aspx" />
+    <Content Include="AdminParametrosCategorias.aspx" />
+    <Content Include="AdminParametrosModelos.aspx" />
+    <Content Include="AdminParametrosTipocategoria.aspx" />
+    <Content Include="AdminParametrosMunicipios.aspx" />
+    <Content Include="AdminParametrosProvincias.aspx" />
+    <Content Include="bin\MASTERSEGUROS.WEB.dll" />
+    <Content Include="bin\MASTERSEGUROS.WEB.pdb" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\components.min.css" />
+    <Content Include="Files\ListaAnexa.html" />
+    <Content Include="AdminParametrosUserRoles.aspx" />
+    <Content Include="fonts\OpenSans.css" />
+    <Content Include="images\ajaxloader.gif" />
+    <Content Include="images\ui-icons_777777_256x240.png" />
+    <Content Include="images\ui-icons_ffffff_256x240.png" />
+    <Content Include="img\gears_ani_0.gif" />
+    <Content Include="img\gears_ani_1.gif" />
+    <Content Include="img\gears_ani_2.gif" />
+    <Content Include="img\gears_ani_3.gif" />
+    <Content Include="js\file-upload.js" />
+    <Content Include="RegistaDocumento.aspx" />
+    <Content Include="Styles\css.css" />
+    <Content Include="Styles\file-upload.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Files\CertificadoResponsabilidade.html" />
+    <Content Include="Files\Certificado.html" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\angola_logo-republica.png" />
+    <Content Include="images\stamp.jpg" />
+    <Content Include="js\jquery-1.12.4.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="PesquisaClientePopup.aspx" />
+    <Content Include="RegistaPagamento.aspx" />
+    <Content Include="AdminSimulacaoUpdate.aspx" />
+    <Content Include="AdminSimulacaoAT.aspx" />
+    <Content Include="AutoDocument.aspx" />
+    <Content Include="ConsultarApolice.aspx" />
+    <Content Include="AdminSimulacao.aspx" />
+    <Content Include="AdminPropostaApolice.aspx" />
+    <Content Include="AdminApolice.aspx" />
+    <Content Include="Styles\app.css" />
+    <Content Include="Files\auto.html" />
+    <Content Include="Files\AutoV3.html" />
+    <Content Include="Files\AvisoCobranca.html" />
+    <Content Include="Files\AutoV2.html" />
+    <Content Include="Files\footer.html" />
+    <Content Include="Files\header.html" />
+    <Content Include="images\logocentral.png" />
+    <Content Include="images\ui-icons_444444_256x240.png" />
+    <Content Include="img\visto.png" />
+    <Content Include="img\yes.png" />
+    <Content Include="img\yes2.png" />
+    <Content Include="js\app.js" />
+    <Content Include="js\jquery.ssd-vertical-navigation.js" />
+    <Content Include="js\jquery.ssd-vertical-navigation.min.js" />
+    <Content Include="PesquisaPagamentos.aspx" />
+    <Content Include="PesquisaSimulacao.aspx" />
+    <Content Include="PesquisaApolice.aspx" />
+    <Content Include="Rastrear.aspx" />
+    <Content Include="amcharts\amcharts.js" />
+    <Content Include="amcharts\funnel.js" />
+    <Content Include="amcharts\gantt.js" />
+    <Content Include="amcharts\gauge.js" />
+    <Content Include="amcharts\images\dragIcon.gif" />
+    <Content Include="amcharts\images\dragIconBlack.gif" />
+    <Content Include="amcharts\images\dragIconH.gif" />
+    <Content Include="amcharts\images\dragIconHBlack.gif" />
+    <Content Include="amcharts\images\dragIconRectBig.png" />
+    <Content Include="amcharts\images\dragIconRectBig.svg" />
+    <Content Include="amcharts\images\dragIconRectBigBlack.png" />
+    <Content Include="amcharts\images\dragIconRectBigBlack.svg" />
+    <Content Include="amcharts\images\dragIconRectBigBlackH.png" />
+    <Content Include="amcharts\images\dragIconRectBigBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRectBigH.png" />
+    <Content Include="amcharts\images\dragIconRectBigH.svg" />
+    <Content Include="amcharts\images\dragIconRectSmall.png" />
+    <Content Include="amcharts\images\dragIconRectSmall.svg" />
+    <Content Include="amcharts\images\dragIconRectSmallBlack.png" />
+    <Content Include="amcharts\images\dragIconRectSmallBlack.svg" />
+    <Content Include="amcharts\images\dragIconRectSmallBlackH.png" />
+    <Content Include="amcharts\images\dragIconRectSmallBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRectSmallH.png" />
+    <Content Include="amcharts\images\dragIconRectSmallH.svg" />
+    <Content Include="amcharts\images\dragIconRoundBig.png" />
+    <Content Include="amcharts\images\dragIconRoundBig.svg" />
+    <Content Include="amcharts\images\dragIconRoundBigBlack.png" />
+    <Content Include="amcharts\images\dragIconRoundBigBlack.svg" />
+    <Content Include="amcharts\images\dragIconRoundBigBlackH.png" />
+    <Content Include="amcharts\images\dragIconRoundBigBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRoundBigH.png" />
+    <Content Include="amcharts\images\dragIconRoundBigH.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmall.png" />
+    <Content Include="amcharts\images\dragIconRoundSmall.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlack.png" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlack.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlackH.png" />
+    <Content Include="amcharts\images\dragIconRoundSmallBlackH.svg" />
+    <Content Include="amcharts\images\dragIconRoundSmallH.png" />
+    <Content Include="amcharts\images\dragIconRoundSmallH.svg" />
+    <Content Include="amcharts\images\eraserIcon.svg" />
+    <Content Include="amcharts\images\eraserIconH.svg" />
+    <Content Include="amcharts\images\export.png" />
+    <Content Include="amcharts\images\exportWhite.png" />
+    <Content Include="amcharts\images\lens.png" />
+    <Content Include="amcharts\images\lens.svg" />
+    <Content Include="amcharts\images\lensWhite.png" />
+    <Content Include="amcharts\images\lensWhite.svg" />
+    <Content Include="amcharts\images\lensWhite_old.png" />
+    <Content Include="amcharts\images\lens_old.png" />
+    <Content Include="amcharts\images\pencilIcon.svg" />
+    <Content Include="amcharts\images\pencilIconH.svg" />
+    <Content Include="amcharts\images\xIcon.svg" />
+    <Content Include="amcharts\images\xIconH.svg" />
+    <Content Include="amcharts\pie.js" />
+    <Content Include="amcharts\plugins\animate\animate.js" />
+    <Content Include="amcharts\plugins\animate\animate.min.js" />
+    <Content Include="amcharts\plugins\animate\examples\funnel.html" />
+    <Content Include="amcharts\plugins\animate\examples\pie.html" />
+    <Content Include="amcharts\plugins\animate\examples\radar.html" />
+    <Content Include="amcharts\plugins\animate\examples\serial_column.html" />
+    <Content Include="amcharts\plugins\animate\examples\serial_line.html" />
+    <Content Include="amcharts\plugins\dataloader\dataloader.js" />
+    <Content Include="amcharts\plugins\dataloader\dataloader.min.js" />
+    <Content Include="amcharts\plugins\dataloader\examples\gantt_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\gauge_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\map_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\map_json_external_function.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\pie_csv.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\pie_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial2_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial_csv.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial_json.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\serial_with_dynamic_graphs.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\stock_csv_data_and_events.html" />
+    <Content Include="amcharts\plugins\dataloader\examples\stock_csv_progressbar.html" />
+    <Content Include="amcharts\plugins\dataloader\lang\en.js" />
+    <Content Include="amcharts\plugins\dataloader\lang\fr.js" />
+    <Content Include="amcharts\plugins\dataloader\lang\lt.js" />
+    <Content Include="amcharts\plugins\dataloader\license.txt" />
+    <Content Include="amcharts\plugins\export\examples\export.config.advanced.js" />
+    <Content Include="amcharts\plugins\export\examples\export.config.default.js" />
+    <Content Include="amcharts\plugins\export\examples\funnel.html" />
+    <Content Include="amcharts\plugins\export\examples\gantt.html" />
+    <Content Include="amcharts\plugins\export\examples\gauge.html" />
+    <Content Include="amcharts\plugins\export\examples\images\bicycle.png" />
+    <Content Include="amcharts\plugins\export\examples\images\car.png" />
+    <Content Include="amcharts\plugins\export\examples\images\motorcycle.png" />
+    <Content Include="amcharts\plugins\export\examples\index.html" />
+    <Content Include="amcharts\plugins\export\examples\map.html" />
+    <Content Include="amcharts\plugins\export\examples\pie1.html" />
+    <Content Include="amcharts\plugins\export\examples\pie2.html" />
+    <Content Include="amcharts\plugins\export\examples\pie3.html" />
+    <Content Include="amcharts\plugins\export\examples\pie4.html" />
+    <Content Include="amcharts\plugins\export\examples\radar.html" />
+    <Content Include="amcharts\plugins\export\examples\serial1.html" />
+    <Content Include="amcharts\plugins\export\examples\serial2.html" />
+    <Content Include="amcharts\plugins\export\examples\serial3.html" />
+    <Content Include="amcharts\plugins\export\examples\stock.html" />
+    <Content Include="amcharts\plugins\export\examples\xy.html" />
+    <Content Include="amcharts\plugins\export\export.css" />
+    <Content Include="amcharts\plugins\export\export.js" />
+    <Content Include="amcharts\plugins\export\export.min.js" />
+    <Content Include="amcharts\plugins\export\lang\de.js" />
+    <Content Include="amcharts\plugins\export\lang\en.js" />
+    <Content Include="amcharts\plugins\export\lang\fr.js" />
+    <Content Include="amcharts\plugins\export\lang\lt.js" />
+    <Content Include="amcharts\plugins\export\lang\pl.js" />
+    <Content Include="amcharts\plugins\export\lang\pt.js" />
+    <Content Include="amcharts\plugins\export\libs\blob.js\blob.js" />
+    <Content Include="amcharts\plugins\export\libs\fabric.js\fabric.js" />
+    <Content Include="amcharts\plugins\export\libs\fabric.js\fabric.min.js" />
+    <Content Include="amcharts\plugins\export\libs\FileSaver.js\FileSaver.js" />
+    <Content Include="amcharts\plugins\export\libs\FileSaver.js\FileSaver.min.js" />
+    <Content Include="amcharts\plugins\export\libs\jszip\jszip.js" />
+    <Content Include="amcharts\plugins\export\libs\jszip\jszip.min.js" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\pdfmake.js" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\pdfmake.min.js" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\vfs_fonts.js" />
+    <Content Include="amcharts\plugins\export\libs\xlsx\xlsx.js" />
+    <Content Include="amcharts\plugins\export\libs\xlsx\xlsx.min.js" />
+    <Content Include="amcharts\plugins\export\shapes\1.svg" />
+    <Content Include="amcharts\plugins\export\shapes\10.svg" />
+    <Content Include="amcharts\plugins\export\shapes\11.svg" />
+    <Content Include="amcharts\plugins\export\shapes\12.svg" />
+    <Content Include="amcharts\plugins\export\shapes\13.svg" />
+    <Content Include="amcharts\plugins\export\shapes\14.svg" />
+    <Content Include="amcharts\plugins\export\shapes\15.svg" />
+    <Content Include="amcharts\plugins\export\shapes\16.svg" />
+    <Content Include="amcharts\plugins\export\shapes\17.svg" />
+    <Content Include="amcharts\plugins\export\shapes\18.svg" />
+    <Content Include="amcharts\plugins\export\shapes\19.svg" />
+    <Content Include="amcharts\plugins\export\shapes\2.svg" />
+    <Content Include="amcharts\plugins\export\shapes\20.svg" />
+    <Content Include="amcharts\plugins\export\shapes\21.svg" />
+    <Content Include="amcharts\plugins\export\shapes\22.svg" />
+    <Content Include="amcharts\plugins\export\shapes\23.svg" />
+    <Content Include="amcharts\plugins\export\shapes\24.svg" />
+    <Content Include="amcharts\plugins\export\shapes\25.svg" />
+    <Content Include="amcharts\plugins\export\shapes\26.svg" />
+    <Content Include="amcharts\plugins\export\shapes\27.svg" />
+    <Content Include="amcharts\plugins\export\shapes\28.svg" />
+    <Content Include="amcharts\plugins\export\shapes\29.svg" />
+    <Content Include="amcharts\plugins\export\shapes\3.svg" />
+    <Content Include="amcharts\plugins\export\shapes\30.svg" />
+    <Content Include="amcharts\plugins\export\shapes\31.svg" />
+    <Content Include="amcharts\plugins\export\shapes\4.svg" />
+    <Content Include="amcharts\plugins\export\shapes\5.svg" />
+    <Content Include="amcharts\plugins\export\shapes\6.svg" />
+    <Content Include="amcharts\plugins\export\shapes\7.svg" />
+    <Content Include="amcharts\plugins\export\shapes\8.svg" />
+    <Content Include="amcharts\plugins\export\shapes\9.svg" />
+    <Content Include="amcharts\plugins\responsive\examples\funnel.html" />
+    <Content Include="amcharts\plugins\responsive\examples\gantt.html" />
+    <Content Include="amcharts\plugins\responsive\examples\gauge.html" />
+    <Content Include="amcharts\plugins\responsive\examples\images\bicycle.png" />
+    <Content Include="amcharts\plugins\responsive\examples\images\car.png" />
+    <Content Include="amcharts\plugins\responsive\examples\images\motorcycle.png" />
+    <Content Include="amcharts\plugins\responsive\examples\index.html" />
+    <Content Include="amcharts\plugins\responsive\examples\map.html" />
+    <Content Include="amcharts\plugins\responsive\examples\pie1.html" />
+    <Content Include="amcharts\plugins\responsive\examples\pie2.html" />
+    <Content Include="amcharts\plugins\responsive\examples\pie3.html" />
+    <Content Include="amcharts\plugins\responsive\examples\radar.html" />
+    <Content Include="amcharts\plugins\responsive\examples\serial1.html" />
+    <Content Include="amcharts\plugins\responsive\examples\serial2.html" />
+    <Content Include="amcharts\plugins\responsive\examples\serial3.html" />
+    <Content Include="amcharts\plugins\responsive\examples\stock.html" />
+    <Content Include="amcharts\plugins\responsive\examples\xy.html" />
+    <Content Include="amcharts\plugins\responsive\license.txt" />
+    <Content Include="amcharts\plugins\responsive\responsive.js" />
+    <Content Include="amcharts\plugins\responsive\responsive.min.js" />
+    <Content Include="amcharts\radar.js" />
+    <Content Include="amcharts\serial.js" />
+    <Content Include="amcharts\xy.js" />
+    <Content Include="css\normalize.css" />
+    <Content Include="EnvioPorProvincia.aspx" />
+    <Content Include="EnvioPorDia.aspx" />
+    <Content Include="AdminCliente_OLD.aspx" />
+    <Content Include="css\prettify.css" />
+    <Content Include="css\sm-blue\sm-blue.css" />
+    <Content Include="css\sm-core-css.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="images\calendario.gif" />
+    <Content Include="images\icon1.png" />
+    <Content Include="images\logo - Copy.png" />
+    <Content Include="img\adicionarAmarelo.png" />
+    <Content Include="img\adicionarAzul.png" />
+    <Content Include="img\AdicionarDocumentos.png" />
+    <Content Include="img\adicionarJanela.png" />
+    <Content Include="img\adicionarJanelaLaranja.png" />
+    <Content Include="img\adicionarMilitante.png" />
+    <Content Include="img\adicionarTodoAmarelo.png" />
+    <Content Include="img\adicionarVerde.png" />
+    <Content Include="img\adicionarVermelho.png" />
+    <Content Include="img\adicionarX.png" />
+    <Content Include="img\apoiantes.png" />
+    <Content Include="img\associar.png" />
+    <Content Include="img\bandeira.png" />
+    <Content Include="img\BI_FRT.jpg" />
+    <Content Include="img\candidatos.png" />
+    <Content Include="img\emblema.png" />
+    <Content Include="img\hierarquia.png" />
+    <Content Include="img\hino.png" />
+    <Content Include="img\importar.png" />
+    <Content Include="img\imprimirCartao.png" />
+    <Content Include="img\pesquisarAmarelo.png" />
+    <Content Include="img\PesquisarAzul.png" />
+    <Content Include="img\PesquisarDocumentos.png" />
+    <Content Include="img\PesquisarJanela.png" />
+    <Content Include="img\PesquisarJanelaLaranja.png" />
+    <Content Include="img\pesquisarMilitante.png" />
+    <Content Include="img\PesquisarTodoAmarelo.png" />
+    <Content Include="img\pesquisarVerde.png" />
+    <Content Include="img\pesquisarVermelho.png" />
+    <Content Include="img\pesquisarX.png" />
+    <Content Include="ImpressaoCartao.aspx" />
+    <Content Include="libs\demo-assets\demo.css" />
+    <Content Include="libs\demo-assets\readme.txt" />
+    <Content Include="libs\demo-assets\shjs\shjs.css" />
+    <Content Include="libs\demo-assets\shjs\shjs.js" />
+    <Content Include="libs\demo-assets\themes-switcher.js" />
+    <Content Include="mobile.aspx" />
+    <Content Include="PesquisaEstafeta.aspx" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Styles\images\ui-icons_444444_256x240.png" />
+    <Content Include="Styles\images\ui-icons_555555_256x240.png" />
+    <Content Include="Styles\images\ui-icons_777777_256x240.png" />
+    <Content Include="Styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\ionicons.min.css.css" />
+    <Content Include="ValidaCliente.aspx" />
+    <Content Include="pie3D.html" />
+    <Content Include="Rota.aspx" />
+    <Content Include="PesquisaEnvio.aspx" />
+    <Content Include="PesquisaCliente.aspx" />
+    <Content Include="PesquisaMilitante.aspx" />
+    <Content Include="PesquisaEventos.aspx" />
+    <Content Include="Scripts\gmaps.js" />
+    <Content Include="Scripts\jquery.smartmenus.js" />
+    <Content Include="Scripts\jquery.smartmenus.min.js" />
+    <Content Include="Scripts\prettify.js" />
+    <Content Include="Styles\images\bckfooter.png" />
+    <Content Include="PesquisaFAQ.aspx" />
+    <Content Include="AdminTraduzir.aspx" />
+    <Content Include="PesquisaBanner.aspx" />
+    <Content Include="PesquisaContacto.aspx" />
+    <Content Include="img\adicionarBanner.png" />
+    <Content Include="img\adicionarContacto.png" />
+    <Content Include="img\adicionarFAQ.png" />
+    <Content Include="img\pesquisarBanner.png" />
+    <Content Include="img\pesquisarContacto.png" />
+    <Content Include="img\pesquisarFAQ.png" />
+    <Content Include="PesquisaLink.aspx" />
+    <Content Include="PesquisaMedia.aspx" />
+    <Content Include="PesquisaArtigo.aspx" />
+    <Content Include="images\certo.gif" />
+    <Content Include="images\xis.gif" />
+    <Content Include="img\LogEntregavel.png" />
+    <Content Include="Utilizadores.aspx" />
+    <Content Include="img\auditores.png" />
+    <Content Include="img\bar_chart.png" />
+    <Content Include="img\bimestres.png" />
+    <Content Include="img\confirmarEntregavel.png" />
+    <Content Include="img\Dominios.png" />
+    <Content Include="img\listuser.png" />
+    <Content Include="img\pie_chart.png" />
+    <Content Include="img\SPI_Agravado.png" />
+    <Content Include="img\SPI_Avanco.png" />
+    <Content Include="img\SPI_EmLinha.png" />
+    <Content Include="img\SPI_Maximo.png" />
+    <Content Include="img\SPI_Moderado.png" />
+    <Content Include="img\SPI_Nulo.png" />
+    <Content Include="img\validarEntregavel.png" />
+    <Content Include="PesquisaClassificador.aspx" />
+    <Content Include="img\Index_Down.png" />
+    <Content Include="img\Index_Equal.png" />
+    <Content Include="img\Index_Up.png" />
+    <Content Include="DLL\Interop.zkemkeeper.dll" />
+    <Content Include="DLL\itextsharp.dll" />
+    <Content Include="DLL\OfficeWebUI.dll" />
+    <Content Include="images\LogoPDF.png" />
+    <Content Include="img\guiaferias.png" />
+    <Content Include="AdminPassword.aspx" />
+    <Content Include="AdminUtilizadores.aspx" />
+    <Content Include="images\BG.jpg" />
+    <Content Include="images\input_left.png" />
+    <Content Include="images\input_middle.png" />
+    <Content Include="images\input_right.png" />
+    <Content Include="images\mailicon.png" />
+    <Content Include="images\passicon.png" />
+    <Content Include="images\passicon_red.png" />
+    <Content Include="images\submit.png" />
+    <Content Include="images\submit_hover.png" />
+    <Content Include="Styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\images\ui-icons_888888_256x240.png" />
+    <Content Include="images\usericon.png" />
+    <Content Include="images\usericon_red.png" />
+    <Content Include="images\wrapper_bottom.png" />
+    <Content Include="images\wrapper_middle.png" />
+    <Content Include="images\wrapper_top.png" />
+    <Content Include="img\add.png" />
+    <Content Include="img\adduser.png" />
+    <Content Include="img\ajuda.png" />
+    <Content Include="img\Angola.png" />
+    <Content Include="img\application_side.png" />
+    <Content Include="img\aprovarferias.png" />
+    <Content Include="img\backup.png" />
+    <Content Include="img\backupdoc.png" />
+    <Content Include="img\bullet_orange.png" />
+    <Content Include="img\cancel.png" />
+    <Content Include="img\cancel2.png" />
+    <Content Include="img\card-address.png" />
+    <Content Include="img\cards-stack.png" />
+    <Content Include="img\changepwd.png" />
+    <Content Include="img\clipboard-task.png" />
+    <Content Include="img\clock-history.png" />
+    <Content Include="img\clock.png" />
+    <Content Include="img\consultaaprovacaoferias.png" />
+    <Content Include="img\consultaferias.png" />
+    <Content Include="img\database-network.png" />
+    <Content Include="img\deleteuser.png" />
+    <Content Include="img\diasano.png" />
+    <Content Include="img\DiasExtra.png" />
+    <Content Include="img\docs.png" />
+    <Content Include="img\document-word.png" />
+    <Content Include="img\edituser.png" />
+    <Content Include="img\entidade.png" />
+    <Content Include="img\favorites.png" />
+    <Content Include="img\feriados.png" />
+    <Content Include="img\folder.gif" />
+    <Content Include="img\hp_barchart.png" />
+    <Content Include="img\hp_barchart16.png" />
+    <Content Include="img\hp_refreshgraph.png" />
+    <Content Include="img\hp_tabsgraph.png" />
+    <Content Include="img\icon_excel.gif" />
+    <Content Include="img\info.png" />
+    <Content Include="img\limpar.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo2.png" />
+    <Content Include="img\luanda.jpg" />
+    <Content Include="img\magnifier.png" />
+    <Content Include="img\magnifier32.png" />
+    <Content Include="img\marcarferias.png" />
+    <Content Include="img\newDocument.png" />
+    <Content Include="img\node-select-child.png" />
+    <Content Include="img\notificacoes.png" />
+    <Content Include="img\officewebui.png" />
+    <Content Include="img\periodos.png" />
+    <Content Include="img\Popup_CloseButton.png" />
+    <Content Include="img\ribbon_logo.jpg" />
+    <Content Include="img\scanner.png" />
+    <Content Include="img\searchadv.png" />
+    <Content Include="img\send.png" />
+    <Content Include="img\spell-check.png" />
+    <Content Include="img\sticky-notes.png" />
+    <Content Include="img\tables-stacks.png" />
+    <Content Include="img\tick - Copy.png" />
+    <Content Include="img\tick.png" />
+    <Content Include="img\upload.png" />
+    <Content Include="img\user.png" />
+    <Content Include="img\user32.png" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.msgbox.min.js" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\jquery.msgbox.css" />
+    <Content Include="images\31.png" />
+    <Content Include="images\exit.png" />
+    <Content Include="images\foto.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="MudaPasswordSucesso.aspx" />
+    <Content Include="Scripts\AnchorPosition.js" />
+    <Content Include="Scripts\CalendarPopup.js" />
+    <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\Functions.js" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.query-2.1.7.js" />
+    <Content Include="Scripts\PopupWindow.js" />
+    <Content Include="Scripts\rainbows.js" />
+    <Content Include="Styles\print.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Teste.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminCliente.aspx.cs">
+      <DependentUpon>AdminCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCliente.aspx.designer.cs">
+      <DependentUpon>AdminCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LoginExt.aspx.cs">
+      <DependentUpon>LoginExt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\LoginExt.aspx.designer.cs">
+      <DependentUpon>LoginExt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAlteraPalavraPasse.aspx.cs">
+      <DependentUpon>AdminAlteraPalavraPasse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAlteraPalavraPasse.aspx.designer.cs">
+      <DependentUpon>AdminAlteraPalavraPasse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAlteraPalavraPasseSuccess.aspx.cs">
+      <DependentUpon>AdminAlteraPalavraPasseSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAlteraPalavraPasseSuccess.aspx.designer.cs">
+      <DependentUpon>AdminAlteraPalavraPasseSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosConfiguracoes.aspx.cs">
+      <DependentUpon>AdminParametrosConfiguracoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosConfiguracoes.aspx.designer.cs">
+      <DependentUpon>AdminParametrosConfiguracoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosMarcas.aspx.cs">
+      <DependentUpon>AdminParametrosMarcas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosMarcas.aspx.designer.cs">
+      <DependentUpon>AdminParametrosMarcas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSimulacaoFrotaUpdate.aspx.cs">
+      <DependentUpon>AdminSimulacaoFrotaUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSimulacaoFrotaUpdate.aspx.designer.cs">
+      <DependentUpon>AdminSimulacaoFrotaUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSimulacaoFrota.aspx.cs">
+      <DependentUpon>AdminSimulacaoFrota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSimulacaoFrota.aspx.designer.cs">
+      <DependentUpon>AdminSimulacaoFrota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosBancos.aspx.cs">
+      <DependentUpon>AdminParametrosBancos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosBancos.aspx.designer.cs">
+      <DependentUpon>AdminParametrosBancos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosCategorias.aspx.cs">
+      <DependentUpon>AdminParametrosCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosCategorias.aspx.designer.cs">
+      <DependentUpon>AdminParametrosCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosModelos.aspx.cs">
+      <DependentUpon>AdminParametrosModelos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosModelos.aspx.designer.cs">
+      <DependentUpon>AdminParametrosModelos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosTipocategoria.aspx.cs">
+      <DependentUpon>AdminParametrosTipocategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosTipocategoria.aspx.designer.cs">
+      <DependentUpon>AdminParametrosTipocategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosUserRoles.aspx.cs">
+      <DependentUpon>AdminParametrosUserRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosUserRoles.aspx.designer.cs">
+      <DependentUpon>AdminParametrosUserRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosMunicipios.aspx.cs">
+      <DependentUpon>AdminParametrosMunicipios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosMunicipios.aspx.designer.cs">
+      <DependentUpon>AdminParametrosMunicipios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminParametrosProvincias.aspx.cs">
+      <DependentUpon>AdminParametrosProvincias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminParametrosProvincias.aspx.designer.cs">
+      <DependentUpon>AdminParametrosProvincias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaClientePopup.aspx.cs">
+      <DependentUpon>PesquisaClientePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaClientePopup.aspx.designer.cs">
+      <DependentUpon>PesquisaClientePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RegistaDocumento.aspx.cs">
+      <DependentUpon>RegistaDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistaDocumento.aspx.designer.cs">
+      <DependentUpon>RegistaDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistaPagamento.aspx.cs">
+      <DependentUpon>RegistaPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistaPagamento.aspx.designer.cs">
+      <DependentUpon>RegistaPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSimulacaoUpdate.aspx.cs">
+      <DependentUpon>AdminSimulacaoUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSimulacaoUpdate.aspx.designer.cs">
+      <DependentUpon>AdminSimulacaoUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSimulacaoAT.aspx.cs">
+      <DependentUpon>AdminSimulacaoAT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSimulacaoAT.aspx.designer.cs">
+      <DependentUpon>AdminSimulacaoAT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoDocument.aspx.cs">
+      <DependentUpon>AutoDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoDocument.aspx.designer.cs">
+      <DependentUpon>AutoDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarApolice.aspx.cs">
+      <DependentUpon>ConsultarApolice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarApolice.aspx.designer.cs">
+      <DependentUpon>ConsultarApolice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSimulacao.aspx.cs">
+      <DependentUpon>AdminSimulacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSimulacao.aspx.designer.cs">
+      <DependentUpon>AdminSimulacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPropostaApolice.aspx.cs">
+      <DependentUpon>AdminPropostaApolice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPropostaApolice.aspx.designer.cs">
+      <DependentUpon>AdminPropostaApolice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminApolice.aspx.cs">
+      <DependentUpon>AdminApolice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminApolice.aspx.designer.cs">
+      <DependentUpon>AdminApolice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaPagamentos.aspx.cs">
+      <DependentUpon>PesquisaPagamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaPagamentos.aspx.designer.cs">
+      <DependentUpon>PesquisaPagamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaSimulacao.aspx.cs">
+      <DependentUpon>PesquisaSimulacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaSimulacao.aspx.designer.cs">
+      <DependentUpon>PesquisaSimulacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaApolice.aspx.cs">
+      <DependentUpon>PesquisaApolice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaApolice.aspx.designer.cs">
+      <DependentUpon>PesquisaApolice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rastrear.aspx.cs">
+      <DependentUpon>Rastrear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rastrear.aspx.designer.cs">
+      <DependentUpon>Rastrear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioPorProvincia.aspx.cs">
+      <DependentUpon>EnvioPorProvincia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnvioPorProvincia.aspx.designer.cs">
+      <DependentUpon>EnvioPorProvincia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioPorDia.aspx.cs">
+      <DependentUpon>EnvioPorDia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnvioPorDia.aspx.designer.cs">
+      <DependentUpon>EnvioPorDia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCliente_OLD.aspx.cs">
+      <DependentUpon>AdminCliente_OLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCliente_OLD.aspx.designer.cs">
+      <DependentUpon>AdminCliente_OLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImpressaoCartao.aspx.cs">
+      <DependentUpon>ImpressaoCartao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImpressaoCartao.aspx.designer.cs">
+      <DependentUpon>ImpressaoCartao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile.aspx.cs">
+      <DependentUpon>mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile.aspx.designer.cs">
+      <DependentUpon>mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaEstafeta.aspx.cs">
+      <DependentUpon>PesquisaEstafeta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaEstafeta.aspx.designer.cs">
+      <DependentUpon>PesquisaEstafeta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidaCliente.aspx.cs">
+      <DependentUpon>ValidaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidaCliente.aspx.designer.cs">
+      <DependentUpon>ValidaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rota.aspx.cs">
+      <DependentUpon>Rota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rota.aspx.designer.cs">
+      <DependentUpon>Rota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaEnvio.aspx.cs">
+      <DependentUpon>PesquisaEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaEnvio.aspx.designer.cs">
+      <DependentUpon>PesquisaEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaCliente.aspx.cs">
+      <DependentUpon>PesquisaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaCliente.aspx.designer.cs">
+      <DependentUpon>PesquisaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaMilitante.aspx.cs">
+      <DependentUpon>PesquisaMilitante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaMilitante.aspx.designer.cs">
+      <DependentUpon>PesquisaMilitante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaFAQ.aspx.cs">
+      <DependentUpon>PesquisaFAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaFAQ.aspx.designer.cs">
+      <DependentUpon>PesquisaFAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTraduzir.aspx.cs">
+      <DependentUpon>AdminTraduzir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTraduzir.aspx.designer.cs">
+      <DependentUpon>AdminTraduzir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaBanner.aspx.cs">
+      <DependentUpon>PesquisaBanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaBanner.aspx.designer.cs">
+      <DependentUpon>PesquisaBanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaContacto.aspx.cs">
+      <DependentUpon>PesquisaContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaContacto.aspx.designer.cs">
+      <DependentUpon>PesquisaContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaEventos.aspx.cs">
+      <DependentUpon>PesquisaEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaEventos.aspx.designer.cs">
+      <DependentUpon>PesquisaEventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaLink.aspx.cs">
+      <DependentUpon>PesquisaLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaLink.aspx.designer.cs">
+      <DependentUpon>PesquisaLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaMedia.aspx.cs">
+      <DependentUpon>PesquisaMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaMedia.aspx.designer.cs">
+      <DependentUpon>PesquisaMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaArtigo.aspx.cs">
+      <DependentUpon>PesquisaArtigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaArtigo.aspx.designer.cs">
+      <DependentUpon>PesquisaArtigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilizadores.aspx.cs">
+      <DependentUpon>Utilizadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilizadores.aspx.designer.cs">
+      <DependentUpon>Utilizadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaClassificador.aspx.cs">
+      <DependentUpon>PesquisaClassificador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesquisaClassificador.aspx.designer.cs">
+      <DependentUpon>PesquisaClassificador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPassword.aspx.cs">
+      <DependentUpon>AdminPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPassword.aspx.designer.cs">
+      <DependentUpon>AdminPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUtilizadores.aspx.cs">
+      <DependentUpon>AdminUtilizadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUtilizadores.aspx.designer.cs">
+      <DependentUpon>AdminUtilizadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comum\ContentType.cs" />
+    <Compile Include="Comum\General.cs" />
+    <Compile Include="Comum\Marcacao.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MudaPasswordSucesso.aspx.cs">
+      <DependentUpon>MudaPasswordSucesso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MudaPasswordSucesso.aspx.designer.cs">
+      <DependentUpon>MudaPasswordSucesso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.aspx.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teste.aspx.designer.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="css\sm-clean\" />
+    <Folder Include="css\sm-mint\" />
+    <Folder Include="css\sm-simple\" />
+    <Folder Include="Docs\" />
+    <Folder Include="excelfiles\" />
+    <Folder Include="ImportedFiles\" />
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\sm-blue\mixins\_round-corners-last-item.scss" />
+    <Content Include="css\sm-blue\mixins\_sub-items-indentation.scss" />
+    <Content Include="css\sm-blue\sm-blue.scss" />
+    <Content Include="css\sm-blue\_mixins.scss" />
+    <Content Include="css\sm-blue\_sm-blue.scss" />
+    <Content Include="amcharts\plugins\animate\LICENSE" />
+    <Content Include="amcharts\plugins\animate\README.md" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\gantt.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\gauge.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\map.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\map_areas.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\MSFT.csv" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\MSFT_events.csv" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\pie.csv" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\pie.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\serial.csv" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\serial.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\serial2.json" />
+    <Content Include="amcharts\plugins\dataloader\examples\data\TXN.csv" />
+    <Content Include="amcharts\plugins\dataloader\readme.md" />
+    <Content Include="amcharts\plugins\export\libs\pdfmake\pdfmake.min.js.map" />
+    <Content Include="amcharts\plugins\export\libs\xlsx\LICENSE" />
+    <Content Include="amcharts\plugins\export\libs\xlsx\xlsx.min.map" />
+    <Content Include="amcharts\plugins\export\LICENSE" />
+    <Content Include="amcharts\plugins\export\README.md" />
+    <Content Include="amcharts\plugins\responsive\readme.md" />
+    <Content Include="amcharts\plugins\responsive\responsive.min.js.map" />
+    <Content Include="Files\MS.AU.AVC.2016.00100.pdf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="fonts\RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="fonts\LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="fonts\xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="fonts\59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="fonts\u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="fonts\cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSq-j2U0lmluP9RWlSytm3ho.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSpX5f-9o1vgP2EXwfjgl7AY.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNShWV49_lSm1NYrwo-zkhivY.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSqaRobkAwv3vxw3jMhVENGA.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSv8zf_FOSsgRmwsS7Aa9k2w.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSj0LW-43aMEzIO6XUTLjad8.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzK-j2U0lmluP9RWlSytm3ho.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzJX5f-9o1vgP2EXwfjgl7AY.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzBWV49_lSm1NYrwo-zkhivY.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzKaRobkAwv3vxw3jMhVENGA.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzP8zf_FOSsgRmwsS7Aa9k2w.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzD0LW-43aMEzIO6XUTLjad8.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSq-j2U0lmluP9RWlSytm3ho %281%29.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSpX5f-9o1vgP2EXwfjgl7AY %281%29.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNShWV49_lSm1NYrwo-zkhivY %281%29.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSqaRobkAwv3vxw3jMhVENGA %282%29.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSv8zf_FOSsgRmwsS7Aa9k2w %281%29.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSj0LW-43aMEzIO6XUTLjad8 %281%29.woff2" />
+    <Content Include="fonts\MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg %282%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzK-j2U0lmluP9RWlSytm3ho %281%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzJX5f-9o1vgP2EXwfjgl7AY %281%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzBWV49_lSm1NYrwo-zkhivY %281%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzKaRobkAwv3vxw3jMhVENGA %281%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzP8zf_FOSsgRmwsS7Aa9k2w %281%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzD0LW-43aMEzIO6XUTLjad8 %281%29.woff2" />
+    <Content Include="fonts\k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg %281%29.woff2" />
+    <None Include="Properties\PublishProfiles\MASTERSEGUROS.pubxml" />
+    <None Include="Properties\PublishProfiles\MPLA.pubxml" />
+    <None Include="Properties\PublishProfiles\Entregavel.pubxml" />
+    <None Include="Properties\PublishProfiles\er.pubxml" />
+    <None Include="Properties\PublishProfiles\SIGE.pubxml" />
+    <None Include="Properties\PublishProfiles\SIGECAP.pubxml" />
+    <None Include="Properties\PublishProfiles\SIGESE.pubxml" />
+    <None Include="Properties\PublishProfiles\SIGPP.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\rptVACATIONFichaCIP.rdl" />
+    <None Include="Reports\rptVACATIONFichaTipoActividadeCIP.rdl" />
+    <None Include="Reports\rptVACATIONFichaTipoActividadeSupervisao.rdl" />
+    <None Include="Reports\rptVACATIONFichaTipoGrupoAlvo.rdl" />
+    <None Include="Reports\rptVACATIONTotaisRegistados.rdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27727</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
