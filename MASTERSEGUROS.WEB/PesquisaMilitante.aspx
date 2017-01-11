@@ -14,6 +14,7 @@
                 <tr>
                     <td>Nr. CAP:</td>
                     <td>
+
                         <asp:TextBox ID="CAPIDTextBox" runat="server" Width="30" MaxLength="4" />&nbsp;<asp:Button ID="Button2" ValidationGroup="Form" CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" runat="server" Text="Seleccionar" CausesValidation="false" OnClientClick="return ConfirmEscolheClassificadorPai();" />
                     </td>
                 </tr>
